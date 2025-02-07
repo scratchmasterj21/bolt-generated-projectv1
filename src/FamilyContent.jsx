@@ -1,9 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const family = ['Mother', 'Father', 'Brother', 'Sister', 'Grandmother', 'Grandfather', 'Uncle', 'Aunt', 'Cousin']
 
 function FamilyContent() {
+  const speak = (member) => {
+    const utterance = new SpeechSynthesisUtterance(member);
+    window.speechSynthesis.speak(utterance);
+  }
+
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Family</h2>

@@ -1,9 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const bodyParts = ['Head', 'Shoulders', 'Knees', 'Toes', 'Eyes', 'Ears', 'Mouth', 'Nose']
 
 function BodyPartsContent() {
+  const speak = (part) => {
+    const utterance = new SpeechSynthesisUtterance(part);
+    window.speechSynthesis.speak(utterance);
+  }
+
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Body Parts</h2>

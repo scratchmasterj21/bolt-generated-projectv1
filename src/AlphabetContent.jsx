@@ -15,15 +15,15 @@ function AlphabetContent() {
       <p className="text-gray-600 mb-4">Learn the English alphabet from A to Z.</p>
       <div className="grid grid-cols-7 gap-4">
         {letters.map((letter, index) => (
-          <Link key={index} to={`/letter/${letter.toLowerCase()}`} className="text-center">
-            <span className="text-2xl font-bold">{letter}</span>
+          <div key={index} className="text-center">
+            <Link to={`/letter/${letter.toLowerCase()}`} className="text-2xl font-bold">{letter}</Link>
             <br />
             <span className="text-gray-600">{letter.toLowerCase()}</span>
             <br />
             <button onClick={() => speak(letter)} className="ml-2">
               <img src="https://cdn-icons-png.flaticon.com/512/340/340683.png" alt="Speaker Icon" className="h-6 w-6" />
             </button>
-          </Link>
+          </div>
         ))}
       </div>
     </div>

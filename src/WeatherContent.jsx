@@ -1,9 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const weather = ['Sunny', 'Rainy', 'Cloudy', 'Snowy', 'Windy', 'Stormy', 'Foggy', 'Hot', 'Cold']
 
 function WeatherContent() {
+  const speak = (term) => {
+    const utterance = new SpeechSynthesisUtterance(term);
+    window.speechSynthesis.speak(utterance);
+  }
+
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Weather</h2>

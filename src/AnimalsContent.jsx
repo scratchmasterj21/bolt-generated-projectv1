@@ -1,9 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const animals = ['Cat', 'Dog', 'Elephant', 'Giraffe', 'Lion', 'Monkey', 'Penguin', 'Rabbit', 'Tiger']
 
 function AnimalsContent() {
+  const speak = (animal) => {
+    const utterance = new SpeechSynthesisUtterance(animal);
+    window.speechSynthesis.speak(utterance);
+  }
+
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Animals</h2>
