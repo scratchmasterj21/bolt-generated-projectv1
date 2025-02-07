@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 const lessons = [
   { id: 1, title: 'Alphabet', description: 'Learn the English alphabet from A to Z.' },
   { id: 2, title: 'Numbers', description: 'Learn to count from 1 to 10.' },
-  { id: 3, title: 'Vocabulary', description: 'Learn common words and phrases.' }
+  { id: 3, title: 'Vocabulary', description: 'Learn common words and phrases.' },
+  { id: 9, title: 'Basic Greetings', description: 'Learn basic greetings.' }
 ]
 
 const vocabularyLessons = [

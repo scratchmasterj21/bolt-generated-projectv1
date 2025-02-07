@@ -9,6 +9,7 @@ import AnimalsContent from "./AnimalsContent.jsx";
 import FamilyContent from "./FamilyContent.jsx";
 import WeatherContent from "./WeatherContent.jsx";
 import BodyPartsContent from "./BodyPartsContent.jsx";
+import BasicGreetingsContent from "./BasicGreetingsContent.jsx";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/vocabulary/6" element={<FamilyContent />} />
         <Route path="/vocabulary/7" element={<WeatherContent />} />
         <Route path="/vocabulary/8" element={<BodyPartsContent />} />
+        <Route path="/lesson/9" element={<BasicGreetingsContent />} />
       </Routes>
     </div>
   );
