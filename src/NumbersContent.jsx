@@ -71,22 +71,22 @@ function NumbersContent() {
   }
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold mb-4">Numbers</h2>
-      <p className="text-gray-600 mb-4">Learn to count from 1 to 10.</p>
+    <div className="p-4 bg-blue-100 rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold text-purple-600 mb-4">Numbers</h2>
+      <p className="text-gray-700 text-lg mb-4">Learn to count from 1 to 10.</p>
       <div className="grid grid-cols-5 gap-4">
         {numbers.map((number, index) => (
-          <div key={index} className="text-center">
-            <span className="text-2xl font-bold">{number}</span>
+          <div key={index} className="text-center bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+            <span className="text-2xl font-bold text-purple-600">{number}</span>
             <br />
-            <button onClick={() => speak(number)} className="ml-2">
-              <img src="https://cdn-icons-png.flaticon.com/512/340/340683.png" alt="Speaker Icon" className="h-6 w-6" />
+            <button onClick={() => speak(number)} className="mt-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/340/340683.png" alt="Speaker Icon" className="h-8 w-8" />
             </button>
           </div>
         ))}
       </div>
       <div className="mt-4">
-        <p className="text-gray-600 mb-2">Practice writing the number:</p>
+        <p className="text-gray-700 text-lg mb-2">Practice writing the number:</p>
         <div className="flex justify-center mb-4">
           <canvas
             ref={canvasRef}

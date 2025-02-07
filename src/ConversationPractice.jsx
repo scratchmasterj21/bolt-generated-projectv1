@@ -48,24 +48,24 @@ function ConversationPractice() {
   }
 
   return (
-    <div>
-      <h2 className="text-xl font-bold mb-4">Conversation Practice</h2>
+    <div className="p-4 bg-blue-100 rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold text-purple-600 mb-4">Conversation Practice</h2>
       <form onSubmit={handleSubmit} className="mb-4">
         <input
           type="text"
           value={input}
           onChange={handleInputChange}
           placeholder="Type something..."
-          className="p-2 border border-gray-300 rounded w-full mb-2"
+          className="p-2 border border-gray-300 rounded w-full mb-2 text-lg"
           disabled={loading}
         />
-        <button type="submit" className="p-2 bg-blue-500 text-white rounded w-full" disabled={loading}>
+        <button type="submit" className="p-2 bg-purple-500 text-white rounded w-full text-lg" disabled={loading}>
           {loading ? 'Thinking...' : 'Send'}
         </button>
       </form>
       <div className="bg-gray-100 p-4 rounded-lg">
         {conversation.map((message, index) => (
-          <p key={index} className={message.role === 'user' ? 'text-gray-800' : 'text-blue-500'}>
+          <p key={index} className={message.role === 'user' ? 'text-gray-800 text-lg' : 'text-purple-600 text-lg'}>
             {message.role === 'user' ? 'You: ' : 'Tutor: '}{message.content}
           </p>
         ))}

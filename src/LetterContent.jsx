@@ -139,14 +139,14 @@ function LetterContent() {
   }
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md text-center">
-      <h2 className="text-2xl font-bold mb-4">{upperCaseLetter}</h2>
-      <p className="text-gray-600 mb-4">How to write the letter {upperCaseLetter} / {lowerCaseLetter}:</p>
+    <div className="p-4 bg-blue-100 rounded-lg shadow-lg text-center">
+      <h2 className="text-3xl font-bold text-purple-600 mb-4">{upperCaseLetter}</h2>
+      <p className="text-gray-700 text-lg mb-4">How to write the letter {upperCaseLetter} / {lowerCaseLetter}:</p>
       <div className="flex justify-center mb-4">
         <img src={getImageUrl(upperCaseLetter)} alt={`Stroke order for ${upperCaseLetter} / ${lowerCaseLetter}`} className="w-full max-w-xs" />
       </div>
       <div className="mt-4">
-        <p className="text-gray-600 mb-2">Practice writing the letter:</p>
+        <p className="text-gray-700 text-lg mb-2">Practice writing the letter:</p>
         <div className="flex justify-center mb-4">
           <canvas
             ref={canvasRef}
@@ -159,11 +159,11 @@ function LetterContent() {
             onMouseLeave={stopDrawing}
           />
         </div>
-        <button onClick={clearCanvas} className="bg-red-500 text-white px-4 py-2 rounded">Erase</button>
+        <button onClick={clearCanvas} className="bg-red-500 text-white px-4 py-2 rounded text-lg mx-auto block">Erase</button>
       </div>
       <div className="flex justify-between mt-4">
-        <button onClick={() => navigateToLetter(-1)} className="bg-blue-500 text-white px-4 py-2 rounded">Previous</button>
-        <button onClick={() => navigateToLetter(1)} className="bg-blue-500 text-white px-4 py-2 rounded">Next</button>
+        <button onClick={() => navigateToLetter(-1)} className="bg-blue-500 text-white px-4 py-2 rounded text-lg">Previous</button>
+        <button onClick={() => navigateToLetter(1)} className="bg-blue-500 text-white px-4 py-2 rounded text-lg">Next</button>
       </div>
     </div>
   )

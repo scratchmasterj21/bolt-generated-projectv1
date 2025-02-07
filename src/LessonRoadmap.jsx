@@ -18,13 +18,13 @@ const vocabularyLessons = [
 
 function LessonRoadmap() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-center mb-4">Lesson Roadmap</h1>
+    <div className="p-4 bg-yellow-100 rounded-lg shadow-lg">
+      <h1 className="text-3xl font-bold text-purple-600 text-center mb-4">Lesson Roadmap</h1>
       <div className="space-y-8">
         {lessons.map(lesson => (
-          <div key={lesson.id} className="bg-white p-4 rounded-lg shadow-md">
-            <Link to={lesson.id === 3 ? '/vocabulary' : `/lesson/${lesson.id}`} className="text-xl font-semibold mb-2 block">{lesson.title}</Link>
-            <p className="text-gray-600">{lesson.description}</p>
+          <div key={lesson.id} className="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+            <Link to={lesson.id === 3 ? '/vocabulary' : `/lesson/${lesson.id}`} className="text-2xl font-semibold text-purple-600 mb-2 block">{lesson.title}</Link>
+            <p className="text-gray-700 text-lg">{lesson.description}</p>
           </div>
         ))}
       </div>
@@ -34,13 +34,13 @@ function LessonRoadmap() {
 
 function Vocabulary() {
   return (
-    <div>
-      <h2 className="text-2xl font-bold text-center mb-4">Vocabulary</h2>
+    <div className="p-4 bg-yellow-100 rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold text-purple-600 text-center mb-4">Vocabulary</h2>
       <div className="space-y-8">
         {vocabularyLessons.map(lesson => (
-          <div key={lesson.id} className="bg-white p-4 rounded-lg shadow-md">
-            <Link to={`/vocabulary/${lesson.id}`} className="text-xl font-semibold mb-2 block">{lesson.title}</Link>
-            <p className="text-gray-600">{lesson.description}</p>
+          <div key={lesson.id} className="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+            <Link to={`/vocabulary/${lesson.id}`} className="text-2xl font-semibold text-purple-600 mb-2 block">{lesson.title}</Link>
+            <p className="text-gray-700 text-lg">{lesson.description}</p>
           </div>
         ))}
       </div>

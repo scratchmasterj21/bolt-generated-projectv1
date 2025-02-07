@@ -14,11 +14,11 @@ import BasicGreetingsContent from "./BasicGreetingsContent.jsx";
 function App() {
   return (
     <div className="container mx-auto p-4 bg-white shadow-md rounded-lg">
-      <nav className="flex justify-between items-center bg-blue-500 p-4 rounded-lg mb-4">
-        <h1 className="text-2xl font-bold text-white">English Language App</h1>
+      <nav className="flex justify-between items-center bg-purple-500 p-4 rounded-lg mb-4">
+        <h1 className="text-3xl font-bold text-white">English Language App</h1>
         <div>
-          <Link to="/" className="text-white mr-4">Lesson Roadmap</Link>
-          <Link to="/practice" className="text-white">Conversation Practice</Link>
+          <Link to="/" className="text-white mr-4 text-lg">Lesson Roadmap</Link>
+          <Link to="/practice" className="text-white text-lg">Conversation Practice</Link>
         </div>
       </nav>
       <Routes>
