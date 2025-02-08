@@ -38,17 +38,24 @@ function ConversationPractice() {
       const data = await response.json()
       const aiResponse = data.choices[0].message.content.trim()
       setConversation([...conversation, { role: 'user', content: input }, { role: 'assistant', content: aiResponse }])
+      speak(aiResponse)
     } catch (error) {
       console.error('Error:', error)
       setConversation([...conversation, { role: 'user', content: input }, { role: 'assistant', content: 'An error occurred. Please try again.' }])
+      speak('An error occurred. Please try again.')
     } finally {
       setLoading(false)
       setInput('')
     }
   }
 
+  const speak = (text) => {
+    const utterance = new SpeechSynthesisUtterance(text)
+    window.speechSynthesis.speak(utterance)
+  }
+
   return (
-    <div className="p-4 bg-blue-100 rounded-lg shadow-lg">
+    <div className="p-4 bg-blue-100 rounded-lg shadow-lg text-center">
       <h2 className="text-3xl font-bold text-purple-600 mb-4">Conversation Practice</h2>
       <form onSubmit={handleSubmit} className="mb-4">
         <input
