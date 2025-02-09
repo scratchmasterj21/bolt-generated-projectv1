@@ -19,7 +19,7 @@ const vocabularyLessons = [
 function LessonRoadmap() {
   return (
     <div className="p-4 bg-yellow-100 rounded-lg shadow-lg">
-      <h1 className="text-3xl font-bold text-purple-600 text-center mb-4">Lesson Roadmap</h1>
+      <h1 className="text-3xl font-bold text-purple-600 text-center mb-4">Lessons</h1>
       <div className="space-y-8">
         {lessons.map(lesson => (
           <div key={lesson.id} className="bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">

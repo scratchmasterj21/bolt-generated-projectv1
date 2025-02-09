@@ -3,7 +3,37 @@
 @tailwind utilities;
 
 body {
-  background-color: #f8fafc; /* Light background color */
+  background-color: #ffccff; /* Light pink background color */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+}
+
+.container {
+  background-color: #ffffff; /* White background for the container */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+nav {
+  background-color: #ff66b2; /* Bright pink background for the navbar */
+  border-radius: 10px; /* Rounded corners */
+}
+
+h1 {
+  color: #ffffff; /* White text color */
+  font-size: 2.5rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+}
+
+.nav-link {
+  color: #ffffff; /* White text color */
+  font-size: 1.25rem; /* Larger font size */
+  margin-right: 1rem; /* Space between links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+  color: #ffcc00; /* Yellow color on hover */
 }
 
 .stroke-animation {
@@ -15,5 +45,63 @@ body {
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 2rem;
+  }
+
+  nav {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  nav {
+    padding: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+    margin-right: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  nav {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+    margin-right: 0.125rem;
   }
 }
