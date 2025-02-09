@@ -54,9 +54,25 @@ function ConversationPractice() {
     window.speechSynthesis.speak(utterance)
   }
 
+  const repeatTTS = (text) => {
+    speak(text)
+  }
+
   return (
     <div className="p-4 bg-blue-100 rounded-lg shadow-lg text-center">
       <h2 className="text-3xl font-bold text-purple-600 mb-4">Conversation Practice</h2>
+      <div className="bg-gray-100 p-4 rounded-lg mb-4">
+        {conversation.map((message, index) => (
+          <div key={index} className={`flex ${message.role === 'user' ? 'justify-start' : 'justify-end'} mb-2`}>
+            <p className={message.role === 'user' ? 'text-left text-gray-800 text-lg' : 'text-right text-purple-600 text-lg'}>
+              {message.content}
+            </p>
+            <button onClick={() => repeatTTS(message.content)} className="ml-2">
+              <img src="https://cdn-icons-png.flaticon.com/512/340/340683.png" alt="Speaker Icon" className="h-6 w-6" />
+            </button>
+          </div>
+        ))}
+      </div>
       <form onSubmit={handleSubmit} className="mb-4">
         <input
           type="text"
@@ -70,13 +86,6 @@ function ConversationPractice() {
           {loading ? 'Thinking...' : 'Send'}
         </button>
       </form>
-      <div className="bg-gray-100 p-4 rounded-lg">
-        {conversation.map((message, index) => (
-          <p key={index} className={message.role === 'user' ? 'text-gray-800 text-lg' : 'text-purple-600 text-lg'}>
-            {message.role === 'user' ? 'You: ' : 'Tutor: '}{message.content}
-          </p>
-        ))}
-      </div>
     </div>
   )
 }
