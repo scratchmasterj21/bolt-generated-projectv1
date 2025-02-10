@@ -13,7 +13,7 @@ function AlphabetContent() {
     <div className="p-4 bg-blue-100 rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold text-purple-600 mb-4">Alphabet</h2>
       <p className="text-gray-700 text-lg mb-4">Learn the English alphabet from A to Z.</p>
-      <div className="grid grid-cols-7 gap-4">
+      <div className="grid grid-cols-5 gap-4">
         {letters.map((letter, index) => (
           <div key={index} className="text-center bg-white p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
             <Link to={`/letter/${letter.toLowerCase()}`} className="text-2xl font-bold text-purple-600">{letter}</Link>
